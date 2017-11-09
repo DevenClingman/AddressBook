@@ -2,31 +2,17 @@
 
 <h1>Contacts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @contacts.each do |contact| %>
-      <tr>
-        <td><%= contact.name %></td>
-        <td><%= contact.address %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div>
+  <% @contacts.each do |contact| %>
+    <div><strong>Name:</strong> <%= contact.name %></div>
+    <div><strong>Address:</strong> <%= contact.address %></div>
+    <div><strong>Email:</strong> <%= contact.email %></div>
+    <div><strong>Phone Number:</strong> <%= contact.phone %></div>
+    <div><%= link_to 'Show', contact %></div>
+    <div><%= link_to 'Edit', edit_contact_path(contact) %></div>
+    <div><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  <% end %>
+</div>
 
 <br>
 
