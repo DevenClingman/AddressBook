@@ -1,19 +1,48 @@
 
+<div class="container">
+  
+    
+      <div>
+        <h1>Address Book</h1>
 
-<h1>Contacts</h1>
 
-<div>
-  <% @contacts.each do |contact| %>
-    <div><strong>Name:</strong> <%= contact.name %></div>
-    <div><strong>Address:</strong> <%= contact.address %></div>
-    <div><strong>Email:</strong> <%= contact.email %></div>
-    <div><strong>Phone Number:</strong> <%= contact.phone %></div>
-    <div><%= link_to 'Show', contact %></div>
-    <div><%= link_to 'Edit', edit_contact_path(contact) %></div>
-    <div><%= link_to 'Delete', contact, method: :delete, data: { confirm: "Are you sure you want to delete this contact" } %></div>
-  <% end %>
+
+        
+          <div>
+
+
+            
+              <% @contacts.each do |contact| %>
+                <div class="card contact-list" style="width: 20rem;">
+                  
+            
+                    <div><strong>Name:</strong> <%= contact.name %></div>
+                    <div><strong>Address:</strong> <%= contact.address %></div>
+                    <div><strong>Email:</strong> <%= contact.email %></div>
+                    <div><strong>Phone Number:</strong> <%= number_to_phone(contact.phone) %></div>
+                    <div>
+                    <br>
+                    <%= link_to "Edit", edit_contact_path(contact), class: "btn btn-info" %> /
+                    <%= link_to "Delete", contact, method: :delete, data: { confirm: "Are you sure you want to delete this contact" }, class: "btn btn-warning" %>
+
+                    </div>
+                  
+                </div>
+                <br>
+              <% end %>
+          </div>
+        
+
+
+
+
+        <br>
+
+        <%= link_to 'New Contact', new_contact_path %>
+
+
+
+      </div>
+    
+  
 </div>
-
-<br>
-
-<%= link_to 'New Contact', new_contact_path %>
