@@ -1,10 +1,46 @@
-<div>
-  <% if user_signed_in? %>
-    <div><%= link_to "Contact List", root_path %></div>
-    <div><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></div>
-    <div><%= link_to "Edit Account Info", edit_user_registration_path %></div>
-  <% else %>
-    <div><%= link_to "Sign In", user_session_path %></div>
-    <div><%= link_to "Register", new_user_registration_path %></div>
-  <% end %>
+
+<div class="container">
+  <div class="row">
+    
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="col-xs-8">
+          <div class="navbar-header">
+            <div>
+              <h4 id="name-header">
+                <% if current_user %>
+                  Welcome <%= current_user.first_name %>
+                <% else %>
+                  Welcome
+                <% end %>  
+                </h4>
+              </div>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Contacts", root_path %></li>
+          </ul>
+        </div>
+
+
+        <div>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Login", edit_user_registration_path %></li>
+              <li><%= link_to "Register", new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </div>
+
+
+      </div>
+    </nav>
+  </div>
 </div>
+
+
+
+
+
