@@ -4,7 +4,8 @@
 
 body {
   background: #abb7cc;
-
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /*styles for index page*/
@@ -35,6 +36,10 @@ body {
   text-align: right;
 }
 
+.navbar-custom {
+  height: 65px;
+}
+
 /*footer styles*/
 
 .main-footer {
@@ -42,8 +47,8 @@ body {
   padding: 20px 20px 20px 20px;
   color: #9d9d9d;
   border-radius: 5px;
-  text-align: center;
 }
+
 
 /*registration signup and edit page styles*/
 
