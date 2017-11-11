@@ -1,0 +1,20 @@
+<div>           
+  <% @contacts.each do |contact| %>
+  <br>
+    <div class="card text-center contact-list" style="width: 40rem;">
+      <div><h3><strong><%= contact.name %></strong></h3></div>
+      <div><strong>Address:</strong> <%= contact.address %></div>
+      <div><strong>Email:</strong> <%= contact.email %></div>
+      <div><strong>Phone Number:</strong> <%= number_to_phone(contact.phone) %></div>
+      <div>
+      <br>
+      <%= link_to "Edit", edit_contact_path(contact), class: "btn btn-info" %> /
+      <%= link_to "Delete", contact, method: :delete, data: { confirm: "Are you sure you want to delete this contact" }, class: "btn btn-warning" %>
+      </div>
+    </div>
+    <br>
+  <% end %>
+  <div class="text-center paginate">
+    <%= paginate @contacts %>
+  </div>
+</div>
