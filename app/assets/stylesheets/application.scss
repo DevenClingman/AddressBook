@@ -7,6 +7,8 @@ body {
 
 }
 
+/*styles for index page*/
+
 .contact-list {
   padding: 20px 20px 20px 20px;
   background: #6a9ced;
@@ -18,6 +20,8 @@ body {
   margin-left: 30px;
 }
 
+/*navbar styles*/
+
 #name-header {
   margin-top: 15px;
   color: white;
@@ -27,10 +31,22 @@ body {
   text-align: right;
 }
 
+/*footer styles*/
+
 .main-footer {
   background: #333333;
   padding: 20px 20px 20px 20px;
   color: #9d9d9d;
   border-radius: 5px;
   text-align: center;
+}
+
+/*registration signup and edit page styles*/
+
+.register-form {
+  background: #9d9d9d;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  margin-right: 5px;
 }
