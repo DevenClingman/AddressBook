@@ -9,7 +9,7 @@
             <div>
               <h4 id="name-header">
                 <% if current_user %>
-                  Welcome <%= current_user.first_name %>
+                  <%= link_to "Welcome #{current_user.first_name}", root_path %>
                 <% else %>
                   Welcome
                 <% end %>  
@@ -17,7 +17,7 @@
               </div>
           </div>
           <ul class="nav navbar-nav">
-            <li><%= link_to "Contacts", root_path %></li>
+            <li><%= link_to "Contacts", contacts_path %></li>
           </ul>
         </div>
 
@@ -28,7 +28,7 @@
               <li><%= link_to "Edit Account", edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             <% else %>
-              <li><%= link_to "Login", edit_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
               <li><%= link_to "Register", new_user_registration_path %></li>
             <% end %>
           </ul>
