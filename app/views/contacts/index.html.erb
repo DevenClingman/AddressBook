@@ -5,7 +5,8 @@
       <div class="col-xs-4">
         <div id="title-address">
           <h1>Address Book</h1>
-          <%= link_to 'New Contact', new_contact_path, class: 'btn btn-primary' %>
+          <%= link_to 'New Contact', new_contact_path, class: 'btn btn-primary' %><br>
+          <%= paginate @contacts %>
         </div>
         <div>           
           <% @contacts.each do |contact| %>
