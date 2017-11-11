@@ -2,14 +2,14 @@
 @import "bootstrap";
 @import "gritter";
 
+body {
+  background: #abb7cc;
+
+}
+
 .contact-list {
   padding: 20px 20px 20px 20px;
   background: #6a9ced;
-}
-
-body {
-  background: #e8ecf2;
-
 }
 
 #title-address {
@@ -25,4 +25,12 @@ body {
 
 .navbar-right {
   text-align: right;
+}
+
+.main-footer {
+  background: #333333;
+  padding: 20px 20px 20px 20px;
+  color: #9d9d9d;
+  border-radius: 5px;
+  text-align: center;
 }
