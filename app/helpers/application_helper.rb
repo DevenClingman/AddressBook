@@ -29,6 +29,15 @@ module ApplicationHelper
     end
   end
 
+  def home_links
+    if user_signed_in?
+      link_to "View Contacts", contacts_path, class: 'btn btn-primary sign-up-button'
+    else
+      (link_to "Login", new_user_session_path, class: 'btn btn-primary sign-up-button') + "<br><br>".html_safe + 
+      (link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary sign-up-button') 
+    end
+  end
+
   def copyright_generator
     ClingmanViewTool::Renderer.copyright "Deven Clingman", "All rights reserved"
   end
