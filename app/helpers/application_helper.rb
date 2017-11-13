@@ -13,7 +13,7 @@ module ApplicationHelper
 
   def nav_links_right
     if user_signed_in?
-      ("<li>".html_safe + (link_to "Edit Account", edit_user_registration_path) + "</li>".html_safe) 
+      ("<li>".html_safe + (link_to "Edit Account", edit_user_registration_path) + "</li>".html_safe) +
       ("<li>".html_safe + (link_to "Logout", destroy_user_session_path, method: :delete) + "</li>".html_safe)
     else
       ("<li>".html_safe + (link_to "Login", new_user_session_path) + "</li>".html_safe) +
