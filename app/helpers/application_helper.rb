@@ -28,4 +28,8 @@ module ApplicationHelper
       "Welcome".html_safe
     end
   end
+
+  def copyright_generator
+    ClingmanViewTool::Renderer.copyright "Deven Clingman", "All rights reserved"
+  end
 end
