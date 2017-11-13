@@ -64,6 +64,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    env (0.3.0)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -200,6 +201,7 @@ DEPENDENCIES
   clingman_view_tool (~> 0.1.0)
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+  env (~> 0.3.0)
   gritter (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.1)
