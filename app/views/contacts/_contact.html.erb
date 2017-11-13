@@ -3,9 +3,9 @@
   <br>
     <div class="card text-center contact-list" style="width: 60rem;">
       <div><h2><strong><%= contact.name %></strong></h2></div>
-      <div><h4><strong>Address:</strong> <%= contact.address %></h4></div>
-      <div><h4><strong>Email:</strong> <%= contact.email %></h4></div>
-      <div><h4><strong>Phone Number:</strong> <%= number_to_phone(contact.phone) %></h4></div>
+      <div><h4><strong class="contact-color">Address:</strong> <%= contact.address %></h4></div>
+      <div><h4><strong class="contact-color">Email:</strong> <%= contact.email %></h4></div>
+      <div><h4><strong class="contact-color">Phone Number:</strong> <%= number_to_phone(contact.phone) %></h4></div>
       <div>
       <br>
       <%= link_to "Edit", edit_contact_path(contact), class: "btn btn-info" %> /

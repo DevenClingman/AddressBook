@@ -25,7 +25,7 @@ module ApplicationHelper
     if current_user
       link_to "Welcome #{current_user.first_name}", root_path
     else
-      "Welcome".html_safe
+      link_to "Welcome", root_path
     end
   end
 
